@@ -64,7 +64,7 @@
 
 
 /* ===================================================================
- * # custom block grid STACK breakpoints
+
  *
  * ------------------------------------------------------------------- */
 @media screen and (max-width:1000px) {
@@ -999,8 +999,8 @@ button.btn--primary,
 input[type="submit"].btn--primary,
 input[type="reset"].btn--primary,
 input[type="button"].btn--primary {
-  background: #3b0d11;
-  border-color: #3b0d11;
+  background: #419ec4;
+  border-color: #419ec4;
   color: #ffffff;
 }
 
@@ -1594,7 +1594,7 @@ input::-moz-focus-inner {
   line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: .3rem;
-  color: #fb8b23;
+  color: #419ec4;
   margin-top: 0;
   margin-bottom: .4rem;
   margin-left: 4px;
@@ -1720,7 +1720,7 @@ input::-moz-focus-inner {
   font-weight: 700;
   text-align: center;
   color: #ffffff;
-  background-color: #3b0d11;
+  background-color: #4692b0;
   height: 4.8rem;
   width: 4.8rem;
   line-height: 4.8rem;
@@ -1863,7 +1863,7 @@ input::-moz-focus-inner {
 
 .header-nav a:hover,
 .header-nav a:focus {
-  color: #fb8b23;
+  color: #4692b0;
 }
 
 .header-nav li {
@@ -2276,7 +2276,7 @@ input::-moz-focus-inner {
 
 .hero-scroll .scroll-link:hover,
 .hero-scroll .scroll-link:focus {
-  color: #fb8b23;
+  color: #4692b0;
 }
 
 .hero-scroll::before {
@@ -2545,12 +2545,12 @@ html.no-csstransitions .hero-content {
 .s-about {
   padding-top: 19.6rem;
   padding-bottom: 19.6rem;
-  background-color: #3b0d11;
+  background-color: #000000;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .s-about .subhead {
-  color: #fb8b23;
+  color: #419ec4;
   margin-bottom: 4rem;
 }
 
@@ -2563,8 +2563,8 @@ html.no-csstransitions .hero-content {
   display: block;
   width: 100%;
   margin-right: 0;
-  background-color: #21070a;
-  border-color: #21070a;
+  background-color: #419ec4;
+  border-color: #419ec4;
 }
 
 /* ------------------------------------------------------------------- 
@@ -3010,7 +3010,7 @@ html.no-csstransitions .hero-content {
 .s-social {
   padding-top: 10.4rem;
   padding-bottom: 9.6rem;
-  background-color: #000000;
+  background-color: #419ec4;
 }
 
 .social-content {
@@ -3158,7 +3158,7 @@ html.no-csstransitions .hero-content {
 .s-footer {
   padding-top: 12rem;
   padding-bottom: 8rem;
-  background-color: #3b0d11;
+  background-color: #050505;
   font-family: "Open Sans", sans-serif;
   font-size: 1.7rem;
   line-height: 1.882;
@@ -3176,8 +3176,8 @@ html.no-csstransitions .hero-content {
 }
 
 .s-footer .btn--footer {
-  border-color: #21070a;
-  background-color: #21070a;
+  border-color: #4692b0;
+  background-color: #4692b0;
   padding: 0 4rem;
 }
 
