@@ -999,8 +999,8 @@ button.btn--primary,
 input[type="submit"].btn--primary,
 input[type="reset"].btn--primary,
 input[type="button"].btn--primary {
-  background: #419ec4;
-  border-color: #419ec4;
+  background: #6699cc;
+  border-color: #6699cc;
   color: #ffffff;
 }
 
@@ -2140,12 +2140,12 @@ input::-moz-focus-inner {
 
 .hero-content h1 {
   font-weight: 700;
-  font-size: 7.6rem;
+  font-size: 4 rem;
   line-height: 1.263;
   letter-spacing: 0;
   color: #ffffff;
   margin-top: 0;
-  margin-right: 350px;
+  margin-right: 500px;
   padding-top: 3.2rem;
   position: relative;
 }
@@ -2160,6 +2160,19 @@ input::-moz-focus-inner {
   top: 0;
   left: .8rem;
 }
+
+.hero-content h3{
+  font-weight: 700;
+  font-size: 4 rem;
+  line-height: 1.263;
+  letter-spacing: 0;
+  color: #ffffff;
+  margin-top: 0;
+  margin-right: 500px;
+  /* padding-top: 3.2rem; */
+  position: relative;
+}
+
 
 /* -------------------------------------------------------------------
  * ## hero content buttons
@@ -2382,7 +2395,7 @@ html.no-csstransitions .hero-content {
  * hero
  * ------------------------------------------------------------------- */
 @media screen and (max-width:1700px) {
-  .hero-content h1 {
+  .hero-content h1, h3 {
     margin-left: 4rem;
   }
 
@@ -2405,7 +2418,7 @@ html.no-csstransitions .hero-content {
   }
 
   .hero-content h1 {
-    font-size: 6.4rem;
+    font-size: 3rem;
   }
 
   .hero-social {
@@ -2421,7 +2434,7 @@ html.no-csstransitions .hero-content {
   }
 
   .hero-content h1 {
-    font-size: 6rem;
+    font-size: 3rem;
   }
 
 }
@@ -2432,11 +2445,19 @@ html.no-csstransitions .hero-content {
   }
 
   .hero-content h1 {
-    font-size: 7.2rem;
+    font-size: 3.2rem;
+    margin-right: 0;
+    margin-left: 0;
+    /* margin-bottom: 4.8rem; */
+  }
+
+  .hero-content h3 {
+    font-size: 2.2rem;
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 4.8rem;
-  }
+    padding-top: 0;
+  }  
 
   .hero-content__buttons {
     position: static;
@@ -2456,8 +2477,12 @@ html.no-csstransitions .hero-content {
   }
 
   .hero-content h1 {
-    font-size: 6.2rem;
+    font-size: 2.2rem;
   }
+
+  .hero-content h3 {
+    font-size: 1.8rem;
+  }  
 
 }
 
@@ -2474,7 +2499,7 @@ html.no-csstransitions .hero-content {
   }
 
   .hero-content h1 {
-    font-size: 5.4rem;
+    font-size: 2.5rem;
   }
 
   .hero-content h1 br {
@@ -2496,7 +2521,7 @@ html.no-csstransitions .hero-content {
 
 @media screen and (max-width:700px) {
   .hero-content h1 {
-    font-size: 4.8rem;
+    font-size: 2.5rem;
   }
 
   .hero-left-bar {
@@ -2512,7 +2537,7 @@ html.no-csstransitions .hero-content {
   }
 
   .hero-content h1 {
-    font-size: 4.4rem;
+    font-size: 2rem;
   }
 
   .hero-left-bar,
@@ -2592,7 +2617,7 @@ html.no-csstransitions .hero-content {
 }
 
 .s-about .subhead {
-  color: #419ec4;
+  color: #6699cc;
   margin-bottom: 4rem;
 }
 
@@ -2605,8 +2630,8 @@ html.no-csstransitions .hero-content {
   display: block;
   width: 100%;
   margin-right: 0;
-  background-color: #419ec4;
-  border-color: #419ec4;
+  background-color: #6699cc;
+  border-color: #6699cc;
 }
 
 /* ------------------------------------------------------------------- 
@@ -3052,7 +3077,7 @@ html.no-csstransitions .hero-content {
 .s-social {
   padding-top: 10.4rem;
   padding-bottom: 9.6rem;
-  background-color: #419ec4;
+  background-color: #6699cc;
 }
 
 .social-content {
@@ -3218,8 +3243,8 @@ html.no-csstransitions .hero-content {
 }
 
 .s-footer .btn--footer {
-  border-color: #4692b0;
-  background-color: #4692b0;
+  border-color: #6699cc;
+  background-color: #6699cc;
   padding: 0 4rem;
 }
 
@@ -3342,7 +3367,7 @@ html.no-csstransitions .hero-content {
 }
 
 .ss-go-top a:hover {
-  background-color: #037c82;
+  background-color: #6699cc;
   color: #ffffff;
 }
 
@@ -3525,16 +3550,16 @@ html.no-csstransitions .hero-content {
 }
 
 .church-staff__picture {
-  -webkit-flex: 0 0 8rem;
-  -ms-flex: 0 0 8rem;
-  flex: 0 0 8rem;
-  max-width: 8rem;
+  -webkit-flex: 0 0 14rem;
+  -ms-flex: 0 0 14rem;
+  flex: 0 0 14rem;
+  max-width: 14rem;
   margin-right: 2rem;
 }
 
 .church-staff__picture img {
-  width: 8rem;
-  height: 8rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
 }
 
@@ -3623,15 +3648,16 @@ html.no-csstransitions .hero-content {
   }
 
   .church-staff__picture {
-    -webkit-flex: 0 0 6.4rem;
-    -ms-flex: 0 0 6.4rem;
-    flex: 0 0 6.4rem;
-    max-width: 6.4rem;
+    -webkit-flex: 0 0 10rem;
+    -ms-flex: 0 0 10rem;
+    flex: 0 0 10rem;
+    max-width: 10rem;
+    margin-right: 2rem;
   }
 
   .church-staff__picture img {
-    width: 6.4rem;
-    height: 6.4rem;
+    width: 10rem;
+    height: 10rem;
   }
 
   .event-thumb {
