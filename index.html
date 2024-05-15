@@ -97,13 +97,13 @@
         <ul class="hero-social">
             <li class="hero-social__title">Sígenos</li>
             <li>
-                <a href="#0" title="">Facebook</a>
+                <a href="https://www.facebook.com/Harvestcdmx" title="" target="_blank">Facebook</a>
             </li>
             <li>
                 <a href="#0" title="">YouTube</a>
             </li>
             <li>
-                <a href="#0" title="">Instagram</a>
+                <a href="https://www.instagram.com/harvestcdmx/" title="" target="_blank">Instagram</a>
             </li>
         </ul> <!-- end hero-social -->
 
@@ -298,7 +298,7 @@
 
             <div class="column large-half medium-full">
                 <div class="series-content__buttons">
-                    <a href="" class="btn btn--large h-full-width">Ve el video</a>
+                    <a class="btn btn--large h-full-width" onclick="openModal('9e4EDbnW0yo')">Ve el video</a>
                     <a href="" class="btn btn--large h-full-width">Escucha el mensaje</a>
                 </div>
 
@@ -319,6 +319,13 @@
         </div> <!-- series-content -->
 
     </section> <!-- end s-series -->
+    <!-- Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="video-container"></div>
+        </div>
+    </div>
 
 
     <!-- Social
@@ -373,7 +380,7 @@
                 </div> <!-- footer-logo -->
                 <p>
                     En Harvest, creemos en el poder transformador del amor de Dios para cambiar vidas. Somos una
-                    comunidad apasionada por seguir a Jesús, amar a las personas y marcar una diferencia en nuestra
+                    iglesia apasionada por seguir a Jesús, amar a las personas y marcar una diferencia en nuestra
                     comunidad.
                 </p>
             </div>
