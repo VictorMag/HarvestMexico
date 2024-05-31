@@ -146,12 +146,4 @@
 
     })();
 
-    // window.addEventListener('load', function() {
-    //     if (!window.location.search.includes("cachebuster")) {
-    //         window.location.href = window.location.href + "?cachebuster=" + new Date().getTime();
-    //     }
-    // });
-    
-    // window.location.reload(true);
-
 })(jQuery);
