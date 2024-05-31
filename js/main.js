@@ -146,29 +146,11 @@
 
     })();
 
-    function openModal(videoId) {
-        var videoUrl = 'https://www.youtube.com/embed/' + videoId;
-        var modal = document.getElementById('videoModal');
-        var videoContainer = document.getElementById('video-container');
-        videoContainer.innerHTML = '<iframe width="100%" height="315" src="' + videoUrl + '" frameborder="0" allowfullscreen></iframe>';
-        modal.style.display = 'block';
-    }
-
-    function closeModal() {
-        var modal = document.getElementById('videoModal');
-        modal.style.display = 'none';
-        var videoContainer = document.getElementById('video-container');
-        videoContainer.innerHTML = '';
-    }
-
-    // Cerrar modal si el usuario hace clic fuera de él
-    window.onclick = function(event) {
-        var modal = document.getElementById('videoModal');
-        if (event.target === modal) {
-            modal.style.display = "none";
-            var videoContainer = document.getElementById('video-container');
-            videoContainer.innerHTML = '';
+    window.addEventListener('load', function() {
+        if (!window.location.search.includes("cachebuster")) {
+            window.location.href = window.location.href + "?cachebuster=" + new Date().getTime();
         }
-    };
+    });
+    
 
 })(jQuery);
