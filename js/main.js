@@ -146,4 +146,24 @@
 
     })();
 
+    document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('hero-video');
+        
+        if (video) {
+            // Asegurarse de que el video está en pausa antes de intentar reproducirlo
+            video.pause();
+
+            // Intenta reproducir el video cuando el documento esté listo
+            video.play().catch(function(error) {
+                console.log('Autoplay failed:', error);
+                // Agregar un listener para la primera interacción del usuario
+                document.addEventListener('click', function() {
+                    video.play();
+                }, { once: true });
+            });
+        } else {
+            console.log('El elemento de video no se encontró.');
+        }
+    });
+
 })(jQuery);
