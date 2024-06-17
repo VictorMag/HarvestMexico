@@ -290,11 +290,8 @@
     <!-- series
     ================================================== -->
     <section class="s-series">
-
         <div class="series-img" style="background-image: url('images/miguel5.jpg');"></div>
-
         <div class="row row-y-center series-content">
-
             <div class="column large-half medium-full">
                 <h3 class="subhead">Predicaciones</h3>
                 <h2>El Camino de la Sabiduría.</h2>
@@ -305,21 +302,17 @@
                     dirección para seguir el camino de Dios, esta serie te inspirará y desafiará a vivir una vida en
                     línea con los principios de Dios.
                 </p>
-            </div> <!-- end column -->
-
+            </div>
             <div class="column large-half medium-full">
                 <div class="series-content__buttons">
-                    <a href="https://www.youtube.com/watch?v=6NRZVH6K1x0" target="_blank"
-                        class="btn btn--large h-full-width">Ve el video</a>
+                    <a id="video-link" href="#" target="_blank" class="btn btn--large h-full-width">Ve el video</a>
                     <a href="https://open.spotify.com/show/00E5IVqvblhU2uhfdfdXgK?si=o5m1TZalSGOSbITnkc2lvA"
-                        target="_blank" class="btn btn--large h-full-width">Escucha el mensaje</a>
+                       target="_blank" class="btn btn--large h-full-width">Escucha el mensaje</a>
                 </div>
-
                 <div class="series-content__subscribe">
                     <p>
                         No te pierdas ningun mensaje. Suscríbete a nuestro canal de Youtube y a nuestros Podcast.
                     </p>
-
                     <ul class="series-content__subscribe-links">
                         <li class="ss-apple-podcast"><a
                                 href="https://podcasts.apple.com/mx/podcast/harvest-m%C3%A9xico-iglesia-b%C3%ADblica/id1660635496?l=en-GB"
@@ -333,11 +326,10 @@
                                 target="_blank">Youtube</a></li>
                     </ul>
                 </div>
-            </div> <!-- end column -->
+            </div>
+        </div>
+    </section>
 
-        </div> <!-- series-content -->
-
-    </section> <!-- end s-series -->
 
     <!-- Social
     ================================================== -->
@@ -447,5 +439,21 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <!-- Carga la biblioteca de la API de Google -->
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <script>
+        fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUGrL1IKDT0CydDDIINEdJ9Q&key=AIzaSyBsa1_1f2INdt0VDrBCzZSD-aVNpR-z4Fc').then(res => res.json())
+  .then(data => {
+    const ultimoServicio = data.items.find(item => item.snippet.title.startsWith('Servicio en línea'));
+    if (ultimoServicio) {
+        // console.log(ultimoServicio)
+      const videoId = ultimoServicio.snippet.resourceId.videoId;
+      const videoLink = `https://www.youtube.com/watch?v=${videoId}`;
+      document.getElementById('video-link').href = videoLink;
+    }
+  })
+  .catch(error => console.error('Error al ubicar video:', error));
+    </script>
 
 </body>
