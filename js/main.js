@@ -146,6 +146,9 @@
 
     })();
 
+    /* Predicas
+    * ------------------------------------------------------ */
+
     document.addEventListener('DOMContentLoaded', function() {
         var video = document.getElementById('hero-video');
         
@@ -165,5 +168,45 @@
             console.log('El elemento de video no se encontró.');
         }
     });
+
+
+    function parseDate(dateString) {
+        const months = {
+            "Enero": 0, "Febrero": 1, "Marzo": 2, "Abril": 3,
+            "Mayo": 4, "Junio": 5, "Julio": 6, "Agosto": 7,
+            "Septiembre": 8, "Octubre": 9, "Noviembre": 10, "Diciembre": 11
+        };
+
+        const parts = dateString.replace(/^\S+/, '').split(',').map(part => part.trim());
+
+        // console.log(parts)
+        const day = parseInt(parts[0].replace(',', ''));
+        // console.log(day)
+        const month = months[parts[1]];
+        // console.log(month)
+        const year = parseInt(parts[2]);
+        // console.log(year)
+
+        return new Date(year, month, day);
+    }
+
+    const today = new Date();
+    const events = document.querySelectorAll('.events-list__item');
+    let upcomingEvents = 0;
+
+    events.forEach(event => {
+        const dateText = event.querySelector('.events-list__meta-date').textContent.trim();
+        const eventDate = parseDate(dateText);
+
+        if (eventDate < today) {
+            event.style.display = 'none';
+        } else {
+            upcomingEvents++;
+        }
+    });
+
+    if (upcomingEvents === 0) {
+        document.getElementById('lead-text').textContent = 'Por el momento no tenemos eventos en camino pero no te preocupes, aquí encontrarás nuestros próximos eventos.';
+    }
 
 })(jQuery);
