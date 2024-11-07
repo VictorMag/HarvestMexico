@@ -209,4 +209,39 @@
         document.getElementById('lead-text').textContent = 'Por el momento no tenemos eventos en camino pero no te preocupes, aquí encontrarás nuestros próximos eventos.';
     }
 
+    const mujeresFechas = [
+        new Date("2024-11-23T00:00:00"),
+        new Date("2024-12-14T00:00:00"),
+    ];
+
+    const hombresFechas = [
+        new Date("2024-12-07T00:00:00"),
+        new Date("2025-02-01T00:00:00"),
+    ];
+    const oracionFechas = [
+        new Date("2024-11-27T00:00:00"),
+    ];
+    
+    
+    function actualizarFecha(eventId, dateElementId, fechas) {
+        const hoy = new Date();
+        const proximaFecha = fechas.find(fecha => fecha > hoy);
+        const dateElement = document.getElementById(dateElementId);
+        if (proximaFecha) {
+            const opcionesFormato = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+            const fechaFormateada = proximaFecha.toLocaleDateString('es-ES', opcionesFormato);
+            dateElement.textContent = `${fechaFormateada}`;
+        } else {
+            // No hay próximas fechas, muestra el mensaje de atención
+            dateElement.textContent = "Mantente atento a nuestras redes para enterarte de la siguiente fecha";
+        }
+    }
+
+    // Actualizar fechas de ambos eventos al cargar la página
+    document.addEventListener("DOMContentLoaded", () => {
+        actualizarFecha("mujeres-event", "mujeres-date", mujeresFechas);
+        actualizarFecha("hombres-event", "hombres-date", hombresFechas);
+        actualizarFecha("oracion-event", "oracion-date", oracionFechas);
+    });
+
 })(jQuery);
