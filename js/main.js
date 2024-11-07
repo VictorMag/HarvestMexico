@@ -220,6 +220,8 @@
     ];
     const oracionFechas = [
         new Date("2024-11-27T00:00:00"),
+        new Date("2024-12-18T00:00:00"),
+        new Date("2025-01-29T00:00:00"),
     ];
     
     
