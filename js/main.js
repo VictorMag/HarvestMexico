@@ -246,4 +246,7 @@
         actualizarFecha("oracion-event", "oracion-date", oracionFechas);
     });
 
+    //año foter
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
 })(jQuery);
